@@ -1,0 +1,12 @@
+---
+# tasks file for roles/bootcamp1
+- name: find_the_hostname
+  debug:
+    var: ansible_hostname
+- name: find_ipv4_address
+  debug:
+    var: ansible_default_ipv4.address
+- name: Copy a file
+  copy:
+    content: "The content of the file"
+    dest: "/tmp/file"
